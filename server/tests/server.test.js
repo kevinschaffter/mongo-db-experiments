@@ -60,7 +60,6 @@ describe('Post /todos', () => {
   });
 });
 
-
 describe('GET /todos', () => {
 
   it('should get all todos', (done) => {
@@ -72,6 +71,6 @@ describe('GET /todos', () => {
       expect(res.body.todos.length).toBe(2);
     })
     .end(done);
-    
+
   });
 });
