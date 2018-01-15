@@ -108,5 +108,21 @@ describe('GET /todos/:id', () => {
       .end(done);
   });
 
+});
 
+
+describe('DELETE /todos/:id', () => {
+
+  it('should delete a todo by id', (done) => {
+
+    request(app)
+    .delete(`/todos/${todos[0]._id.toString()}`)
+    .expect(200)
+    .end((err, res) => {
+      if (err) {
+        return done(err);
+      };
+    });
+    done();
+  });
 });
